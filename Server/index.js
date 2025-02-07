@@ -11,5 +11,5 @@ app.get("/", (req, res) => {
 });
 app.use("/user", userRoutes);
 // app.use("/instructor");
-// app.use("/admin");
+app.use("/admin");
 app.listen(port, () => console.log(`Server started at port ${port}`));
