@@ -11,6 +11,28 @@ const instructorSchema = new mongoose.Schema(
       linkedin: String,
       twitter: String,
     },
+    videoLectures: [
+      { type: mongoose.Schema.Types.ObjectId, ref: "VideoLecture" },
+    ],
+    courses: [{ type: mongoose.Schema.Types.ObjectId, ref: "Course" }],
+    purchasedCourses: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Course",
+      },
+    ],
+    enrolledCourses: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Course",
+      },
+    ],
+    wishlistedCourses: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Course",
+      },
+    ],
     subscribedInstructors: [
       {
         type: mongoose.Schema.Types.ObjectId,
